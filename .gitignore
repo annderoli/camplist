@@ -1,42 +1,59 @@
-### Build (Maven)
-
+# ========================
+# Build (Maven / Gradle)
+# ========================
 target/
+build/
+out/
+*.class
+*.jar
+*.war
+*.ear
 
-### Logs
+# Maven
+.mvn/
+mvnw
+mvnw.cmd
 
+# ========================
+# Logs
+# ========================
+logs/
 *.log
 
-### Arquivos temporários
+# ========================
+# IDEs
+# ========================
 
-*.tmp
-*.swp
-*~
-
-### IntelliJ IDEA
-
+# IntelliJ
 .idea/
 *.iml
-*.iws
-out/
 
-### Sistema operacional
-
+# ========================
+# Sistema Operacional
+# ========================
 .DS_Store
 Thumbs.db
 
-### Banco H2 (arquivos locais)
+# ========================
+# Arquivos temporários
+# ========================
+*.tmp
+*.swp
 
-docker-compose.yml
-
-*.mv.db
-*.trace.db
-
-### Variáveis de ambiente / segredos
-
-.env
-
-### Configurações por ambiente
+# ========================
+# Configurações sensíveis
+# ========================
+src/main/resources/application.yml
 src/main/resources/application.yaml
-application-dev.yml
-application-prod.yml
-application-local.yml
+src/main/resources/application.properties
+
+# Profiles
+src/main/resources/application-*.yml
+src/main/resources/application-*.yaml
+src/main/resources/application-*.properties
+
+# ========================
+# Uploads / arquivos gerados
+# ========================
+uploads/
+tmp/
