@@ -10,7 +10,7 @@ public class ItemMapper {
 
         Item item = new Item();
         item.setName(dto.name());
-        item.setAmount(dto.amount());
+        item.setSeparated(dto.separated());
 
         return item;
 
@@ -22,7 +22,7 @@ public class ItemMapper {
 
                 item.getId(),
                 item.getName(),
-                item.getAmount()
+                item.isSeparated()
 
         );
 

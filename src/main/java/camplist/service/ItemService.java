@@ -1,10 +1,7 @@
 package camplist.service;
 
-import camplist.dto.ItemResponseDto;
 import camplist.entity.Item;
 import camplist.repository.ItemRepository;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 
@@ -23,6 +20,15 @@ public class ItemService {
         return repository.save(item);
     }
 
+    public Item separatedItem(Long id) {
+        Item item = repository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Item não encontrado"));
+        
+        item.setSeparated(!item.isSeparated());
+
+        return repository.save(item);
+    }
+
     public List<Item> getAllItems() {
         return repository.findAll();
     }
@@ -30,5 +36,20 @@ public class ItemService {
     public Item getItemById(Long id) {
         return repository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Item não encontrado"));
+    }
+
+    public Item updateItem(Long id, Item itemDetails) {
+        Item item = repository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Item não encontrado"));
+
+        item.setName(itemDetails.getName());
+        item.setSeparated(itemDetails.isSeparated());
+
+        return repository.save(item);
+    }
+
+    public void deleteItem(Long id) {
+       repository.deleteById(id);
+
     }
 }

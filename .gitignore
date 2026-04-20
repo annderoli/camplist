@@ -26,6 +26,8 @@ Thumbs.db
 
 ### Banco H2 (arquivos locais)
 
+docker-compose.yml
+
 *.mv.db
 *.trace.db
 
@@ -34,7 +36,7 @@ Thumbs.db
 .env
 
 ### Configurações por ambiente
-
+application.yaml
 application-dev.yml
 application-prod.yml
 application-local.yml

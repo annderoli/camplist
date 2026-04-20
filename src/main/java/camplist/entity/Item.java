@@ -13,10 +13,14 @@ public class Item {
     private Long id;
 
     private String name;
-    private int amount;
+    private boolean separated;
 
     public Long getId() {
         return id;
+    }
+
+    public boolean isSeparated() {
+        return separated;
     }
 
     public String getName() {
@@ -27,11 +31,7 @@ public class Item {
         this.name = name;
     }
 
-    public int getAmount() {
-        return amount;
-    }
-
-    public void setAmount(int amount) {
-        this.amount = amount;
+    public void setSeparated(boolean separated) {
+        this.separated = separated;
     }
 }
