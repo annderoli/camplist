@@ -1,1 +1,1 @@
-# camplist
+# campinglist

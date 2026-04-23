@@ -1,6 +1,6 @@
-package camplist.repository;
+package campinglist.repository;
 
-import camplist.entity.Item;
+import campinglist.entity.Item;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ItemRepository extends JpaRepository<Item, Long> {

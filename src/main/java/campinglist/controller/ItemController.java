@@ -1,7 +1,7 @@
-package camplist.controller;
+package campinglist.controller;
 
-import camplist.entity.Item;
-import camplist.service.ItemService;
+import campinglist.entity.Item;
+import campinglist.service.ItemService;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 

@@ -1,8 +1,8 @@
-package camplist.mapper;
+package campinglist.mapper;
 
-import camplist.dto.ItemRequestDto;
-import camplist.dto.ItemResponseDto;
-import camplist.entity.Item;
+import campinglist.dto.ItemRequestDto;
+import campinglist.dto.ItemResponseDto;
+import campinglist.entity.Item;
 
 public class ItemMapper {
 

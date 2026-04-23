@@ -1,0 +1,108 @@
+/* Estilos da tela de sucesso */
+
+.fade-in {
+  animation: fadeIn 0.4s ease-out;
+}
+
+.success-state {
+  animation: scaleIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.success-icon {
+  font-size: 5rem;
+  margin-bottom: 10px;
+  animation: spinTada 1s ease-out;
+}
+
+h2 {
+  font-size: 2rem;
+  margin: 0 0 10px 0;
+}
+
+.success-text {
+  color: #4ade80;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+/* Lista final */
+.final-list {
+  text-align: left;
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 16px;
+  padding: 20px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.final-list::-webkit-scrollbar { width: 6px; }
+.final-list::-webkit-scrollbar-track { background: rgba(0,0,0,0.1); border-radius: 10px; }
+.final-list::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.3); border-radius: 10px; }
+
+.list-item {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.list-item:last-child { border-bottom: none; }
+
+.check-icon { font-size: 1.2rem; }
+
+
+
+.item-name-checked {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: line-through;
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
+  padding: 10px 24px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.mt-20 { margin-top: 20px; }
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes spinTada {
+  0%   { transform: scale(0) rotate(-180deg); }
+  50%  { transform: scale(1.2) rotate(20deg); }
+  75%  { transform: scale(0.9) rotate(-10deg); }
+  100% { transform: scale(1) rotate(0); }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .success-state {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .final-list {
+    flex: 1;
+    max-height: none;
+  }
+}

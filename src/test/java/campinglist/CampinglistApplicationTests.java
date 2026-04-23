@@ -1,10 +1,10 @@
-package camplist;
+package campinglist;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CamplistApplicationTests {
+class CampinglistApplicationTests {
 
 	@Test
 	void contextLoads() {

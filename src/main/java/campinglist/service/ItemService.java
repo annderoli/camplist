@@ -1,7 +1,7 @@
-package camplist.service;
+package campinglist.service;
 
-import camplist.entity.Item;
-import camplist.repository.ItemRepository;
+import campinglist.entity.Item;
+import campinglist.repository.ItemRepository;
 
 import java.util.List;
 

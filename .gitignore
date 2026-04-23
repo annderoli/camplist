@@ -1,65 +1,93 @@
 # ========================
+
 # Build (Maven / Gradle)
+
 # ========================
+
 target/
 build/
 out/
+
+# arquivos gerados
+
 *.class
-*.jar
-*.war
-*.ear
-
-# Maven
-.mvn/
-mvnw
-mvnw.cmd
 
 # ========================
+
 # Logs
+
 # ========================
+
 logs/
 *.log
 
 # ========================
+
 # IDEs
+
 # ========================
 
 # IntelliJ
+
 .idea/
 *.iml
 
 # ========================
+
 # Sistema Operacional
+
 # ========================
+
 .DS_Store
 Thumbs.db
 
 # ========================
+
 # Arquivos temporários
+
 # ========================
+
 *.tmp
 *.swp
 
 # ========================
-# Configurações sensíveis
-# ========================
-src/main/resources/application.yml
-src/main/resources/application.yaml
-src/main/resources/application.properties
 
-# Profiles
-src/main/resources/application-*.yml
-src/main/resources/application-*.yaml
+# Configurações sensíveis
+
+# ========================
+
+# configs locais (NÃO versionar)
+
+src/main/resources/application-local.yml
+src/main/resources/application-local.yaml
+src/main/resources/application-dev.yml
+src/main/resources/application-dev.yaml
 src/main/resources/application-*.properties
 
 # ========================
+
 # Uploads / arquivos gerados
+
 # ========================
+
 uploads/
 tmp/
 
 # ========================
-# Pastas / arquivos
+
+# Frontend (se buildado separado)
+
 # ========================
-frontend-campinglist/
+
+frontend-campinglist/node_modules/
+frontend-campinglist/dist/
+frontend-campinglist/build/
+
+# ========================
+
+# Docker (opcional)
+
+# ========================
+
+.env
 

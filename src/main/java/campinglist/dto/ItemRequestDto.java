@@ -1,4 +1,4 @@
-package camplist.dto;
+package campinglist.dto;
 
 public record ItemRequestDto(
         String name,

@@ -6,11 +6,11 @@ services:
     container_name: postgres-container
     restart: always
     environment:
-      POSTGRES_USER: annderoli
-      POSTGRES_PASSWORD: 123
-      POSTGRES_DB: test
+      POSTGRES_USER: ${DB_USER:-postgres}
+      POSTGRES_PASSWORD: ${DB_PASS:-postgres}
+      POSTGRES_DB: ${DB_NAME:-test}
     ports:
-      - "5432:5432"
+      - "5432:5432" # opcional (remova em produção)
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
@@ -19,12 +19,25 @@ services:
     container_name: pgadmin
     restart: always
     environment:
-      PGADMIN_DEFAULT_EMAIL: admin@admin.com
-      PGADMIN_DEFAULT_PASSWORD: 123
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_EMAIL:-admin@admin.com}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_PASS:-admin}
     ports:
       - "5050:80"
     depends_on:
       - postgres
+
+  app:
+    build: .
+    container_name: spring-app
+    depends_on:
+      - postgres
+    environment:
+      DB_URL: jdbc:postgresql://postgres:5432/${DB_NAME:-test}
+      DB_USER: ${DB_USER:-postgres}
+      DB_PASS: ${DB_PASS:-postgres}
+      DDL_AUTO: update
+    ports:
+      - "8080:8080"
 
 volumes:
   postgres_data:

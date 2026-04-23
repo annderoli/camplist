@@ -1,7 +1,7 @@
 # Read Me First
 The following was discovered as part of building this project:
 
-* The original package name '.camplist' is invalid and this project uses 'camplist' instead.
+* The original package name '.campinglist' is invalid and this project uses 'campinglist' instead.
 
 # Getting Started
 
